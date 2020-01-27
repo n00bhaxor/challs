@@ -19,3 +19,4 @@ Reverse('Character')
 From_Base64('A-Za-z0-9+/=',true)
 From_Hex('Auto')
 From_Base64('A-Za-z0-9+/=',true)
+
