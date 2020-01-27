@@ -9,14 +9,25 @@ For now, just a Cyberchef recipe until I've got time to do a proper writeup. To 
 
 Here's the recipe:
 
-Strings('Single byte',4,'Alphanumeric + punctuation (A)',false)
-Extract_URLs(false)
-Find_/_Replace({'option':'Regex','string':'pastebin.com/'},'pastebin.com/raw/',true,false,true,false)
-HTTP_request('GET','https://pastebin.com/raw/NnH1kAxC','','Cross-Origin Resource Sharing',false)
-From_Base64('A-Za-z0-9+/=',true)
-From_Hex('Auto')
-Reverse('Character')
-From_Base64('A-Za-z0-9+/=',true)
-From_Hex('Auto')
-From_Base64('A-Za-z0-9+/=',true)
-
+[
+  { "op": "Strings",
+    "args": ["Single byte", 4, "Alphanumeric + punctuation (A)", false] },
+  { "op": "Extract URLs",
+    "args": [false] },
+  { "op": "Find / Replace",
+    "args": [{ "option": "Regex", "string": "pastebin.com/" }, "pastebin.com/raw/", true, false, true, false] },
+  { "op": "HTTP request",
+    "args": ["GET", "https://pastebin.com/raw/NnH1kAxC", "", "Cross-Origin Resource Sharing", false] },
+  { "op": "From Base64",
+    "args": ["A-Za-z0-9+/=", true] },
+  { "op": "From Hex",
+    "args": ["Auto"] },
+  { "op": "Reverse",
+    "args": ["Character"] },
+  { "op": "From Base64",
+    "args": ["A-Za-z0-9+/=", true] },
+  { "op": "From Hex",
+    "args": ["Auto"] },
+  { "op": "From Base64",
+    "args": ["A-Za-z0-9+/=", true] }
+]
